@@ -1,4 +1,9 @@
-class LoginPage {
+import BasePage from "./commonFeatures/basePage";
+
+const header = '[data-cy="header-navbar"]';
+const dashboardButton = "button.MuiButtonBase-root";
+
+class LoginPage extends BasePage {
   setToken() {
     const token = Cypress.env("TOKEN");
     const loggedUser = Cypress.env("USER");
@@ -10,7 +15,13 @@ class LoginPage {
   }
 
   verifyDashboardLoaded() {
-    cy.contains("Dashboard").should("be.visible");
+    this.verifyElementContains(dashboardButton, "Dashboard");
+  }
+
+  verifyHeader() {
+    cy.get(header).within(() => {
+      this.verifyText("h1", "Mage Guard");
+    });
   }
 }
 

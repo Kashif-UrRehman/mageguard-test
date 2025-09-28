@@ -45,6 +45,14 @@ class BasePage {
       .invoke("text")
       .should("contain", expectedMessage);
   }
+
+  verifyText(selector, expectedText) {
+    cy.get(selector).should("contain.text", expectedText);
+  }
+
+  verifyElementContains(selector, text, timeout = 10000) {
+    cy.contains(selector, text, { timeout }).should("be.visible");
+  }
 }
 
 export default BasePage;
