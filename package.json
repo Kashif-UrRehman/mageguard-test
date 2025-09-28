@@ -1,0 +1,17 @@
+{
+  "name": "mageguard",
+  "version": "1.0.0",
+  "description":  "Cypress automation tests for Mage Guard application",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "cy:open": "cypress open",
+    "cy:run:headed": "cypress run --headed --browser chrome"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^15.3.0"
+  }
+}

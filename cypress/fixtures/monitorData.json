@@ -1,0 +1,20 @@
+{
+  "validMonitor": {
+    "type": "https",
+    "name": "Test Monitor",
+    "url": "www.google.com.pk",
+    "unit": "s",
+    "interval": "30",
+    "retries": "3",
+    "resend": "60",
+    "statusCode": "200-299"
+  },
+  "tag": {
+    "tagName": "Pink Tag",
+    "color":"Pink",
+    "tagValue": "1"
+  },
+  "updatedMonitor": {
+    "name": "Updated Monitor"
+  }
+}
