@@ -57,14 +57,35 @@ npm run cy:run
 npm run cy:run:headed
 ```
 
-### Run a specific test file
+## 📝 Test Reporting
 
+We use **Mochawesome** to generate HTML and JSON reports for Cypress test runs.
+
+### Scripts
+- Run tests with reporter:
+  ```bash
+  npm run cy:run:report
+  ```
+- Merge JSON reports:
+
+  ```bash
+  npm run merge:reports
+  ```
+- Generate HTML report:
+  ```bash
+  npm run generate:report
+  ```
+- Run full report workflow (test + merge + generate):
+  ```bash
+  npm run test:report
+  ```
+
+## Report Location
+
+After running npm run test:report, open the report here:
 ```bash
-npm run cy:spec -- --spec "cypress/e2e/monitor.spec.js"
+cypress/reports/mochawesome/index.html
 ```
-
----
-
 ## 📂 Project Structure
 
 ```
