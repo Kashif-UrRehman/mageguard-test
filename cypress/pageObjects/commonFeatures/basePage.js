@@ -22,23 +22,21 @@ class BasePage {
 
   selectDropdownByText(dropdownSelector, optionText) {
     cy.get(dropdownSelector).click();
-    cy.contains('li', optionText).click();
+    cy.contains("li", optionText).click();
   }
 
   verifyToastMessage(selector, expectedMessage) {
     cy.get(selector, { timeout: 10000 })
-      .should('be.visible')
-      .invoke('text')
+      .should("be.visible")
+      .invoke("text")
       .then((text) => {
-        const cleanText = text.trim().replace(/\s+/g, ' ');
+        const cleanText = text.trim().replace(/\s+/g, " ");
         expect(cleanText).to.contains(expectedMessage);
       });
   }
 
   clickItemByLabel(selector, label) {
-    cy.contains(selector, label, { timeout: 10000 })
-      .should('be.visible')
-      .click();
+    cy.contains(selector, label, { timeout: 10000 }).should("be.visible").click();
   }
 
   verifyValidationError(expectedMessage) {
@@ -47,8 +45,6 @@ class BasePage {
       .invoke("text")
       .should("contain", expectedMessage);
   }
-
-
 }
 
 export default BasePage;

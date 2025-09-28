@@ -1,7 +1,7 @@
 class LoginPage {
   setToken() {
-    const token = Cypress.env("TOKEN")
-    const loggedUser =  Cypress.env("USER");
+    const token = Cypress.env("TOKEN");
+    const loggedUser = Cypress.env("USER");
 
     cy.window().then((win) => {
       win.localStorage.setItem("token", token);
@@ -10,7 +10,7 @@ class LoginPage {
   }
 
   verifyDashboardLoaded() {
-    cy.contains('Dashboard').should('be.visible');
+    cy.contains("Dashboard").should("be.visible");
   }
 }
 
