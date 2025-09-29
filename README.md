@@ -18,7 +18,7 @@ Make sure you have the following installed:
 Clone the repo and install dependencies:
 
 ```bash
-git clone https://github.com/your-username/mageguard.git
+git clone https://github.com/Kashif-UrRehman/mageguard-test
 cd mageguard
 npm install
 ```
